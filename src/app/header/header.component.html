@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-2 offset-4">
+    <button type="button" class="btn btn-primary" (click)="displayHome(true)">Home</button>
+  </div>
+  <div class="col-3 offset-1">
+    <button type="button" class="btn btn-success" (click)="displayHome(false)">My Books</button>
+  </div>
+
+</div>
+<div class="row bg-warning">
+  <form [formGroup]="searchForm">
+    <label for="search">Enter Your Book Name To Search</label>
+    <input type="text" id="search" formControlName="search">
+  </form>
+</div>

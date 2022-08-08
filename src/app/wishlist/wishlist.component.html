@@ -1,0 +1,4 @@
+<div *ngFor="let Book of MyBooks">
+  {{Book.title}}
+  <button class="btn btn-danger" type="button" (click)="DeleteBook(Book)">Delete</button>
+</div>

@@ -1,0 +1,19 @@
+<div class="row" *ngFor="let Book of MyBooks">
+  <div class="row">
+    <div class="col-4" *ngIf="Book.imageLinks">
+      <img src={{Book.imageLinks}}>
+    </div>
+    <div class="col-4">
+      <h2 *ngIf="Book.title">{{Book.title}}</h2>
+      <h4 *ngIf="Book.subtitle">{{Book.subtitle}}</h4>
+    </div>
+    <div class="col-4">
+      <ul>
+        <li *ngIf="Book.authors">{{Book.authors}}</li>
+        <li *ngIf="Book.publishedDate">{{Book.publishedDate}}</li>
+        <li *ngIf="Book.description">{{Book.description | slice:0:100}}</li>
+        <li *ngIf="Book.pageCount">{{Book.pageCount}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

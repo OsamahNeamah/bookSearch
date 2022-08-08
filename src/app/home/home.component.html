@@ -1,0 +1,11 @@
+<app-header (displayHomePage)="displayHome($event)" (NewBooks)="changeBooks($event)"></app-header>
+<div class="row" *ngIf="displayHomePage==true">
+  <div class="col-sm-8 col-md-6">
+    <app-main [Books]="Books"></app-main>
+  </div>
+  <div class="col-sm-4 col-md-4 offset-md-2">
+    <app-wishlist></app-wishlist>
+  </div>
+</div>
+<div *ngIf="displayHomePage==false"> <app-mybooks></app-mybooks></div>
+
